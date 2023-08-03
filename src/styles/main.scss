@@ -4,6 +4,7 @@
 @use "plans";
 @use "available-devices";
 @use "faq";
+@use "footer";
 
 @font-face {
     font-family: "Avenir";
@@ -94,7 +95,7 @@ body {
 
     &__text-container {
         padding: 0 2vw;
-        
+
         h2 {
             margin-bottom: 24px;
         }
@@ -103,7 +104,7 @@ body {
     &--image-full-width {
         display: block;
         position: relative;
-        
+
         img {
             width: 100%;
         }
