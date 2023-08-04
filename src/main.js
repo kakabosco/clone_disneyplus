@@ -2,6 +2,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll("[data-tab-button]");
     const questions = document.querySelectorAll("[data-faq-question]");
 
+    const heroSection = document.querySelector(".hero");
+    const heightHero = heroSection.clientHeight;
+
+    window.addEventListener("scroll", checkScrollPosition);
+    window.addEventListener("load", checkScrollPosition);
+
+    function checkScrollPosition() {
+        const currentPosition = window.scrollY;
+
+        if (currentPosition < heightHero) {
+            hideHeaderElements();
+        } else {
+            showHeaderElements();
+        }
+    }
+
+    // Shows section, programming tabs
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function (button) {
             const targetTab = button.target.dataset.tabButton;
@@ -13,10 +30,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // FAQ section, accordion toggle
     for (let i = 0; i < questions.length; i++) {
         questions[i].addEventListener("click", openOrCloseAnswer);
     }
 });
+
+function hideHeaderElements() {
+    const header = document.querySelector(".header");
+    header.classList.add("header--is-hidden");
+}
+
+function showHeaderElements() {
+    const header = document.querySelector(".header");
+    header.classList.remove("header--is-hidden");
+}
 
 function openOrCloseAnswer(element) {
     const className = "faq__questions__item--is-open";

@@ -10,7 +10,6 @@
         &__item {
             background-color: #13151d;
             margin-bottom: 16px;
-            list-style: none;
 
             &__question {
                 color: #fff;
@@ -50,7 +49,7 @@
 
             &--is-open {
                 .faq__questions__item__question::after {
-                    content: "-"
+                    content: "-";
                 }
 
                 .faq__questions__item__answer {
