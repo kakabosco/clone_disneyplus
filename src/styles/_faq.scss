@@ -29,6 +29,10 @@
                     align-items: center;
                     font-size: 40px;
                 }
+
+                @media (max-width: 768px) {
+                    font-size: 15px;
+                }
             }
 
             &__answer {

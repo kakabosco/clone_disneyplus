@@ -10,11 +10,16 @@
         <header class="header">
             <div class="header__container">
                 <h1>
-                    <img class="header__logo" src="dist/images/disneyplus.svg" alt="Disney+">
+                    <img
+                        class="header__logo"
+                        src="dist/images/disneyplus.svg"
+                        alt="Disney+" />
                 </h1>
                 <ul class="header__links">
                     <li class="header__links__item">
-                        <a href="#" class="button button--secondary">Assine agora</a>
+                        <a href="#" class="button button--secondary"
+                            >Assine agora</a
+                        >
                     </li>
                     <li class="header__links__item">
                         <a href="#" class="button button--dark">Entrar</a>
@@ -55,7 +60,7 @@
                     </li>
                 </ul>
                 <p class="text--small">
-                    *O preço pode variar cas a assinatura seja feita através de
+                    *O preço pode variar caso a assinatura seja feita através de
                     outras plataformas.
                 </p>
             </div>
@@ -214,7 +219,7 @@
                 </li>
             </ul>
             <p class="text--small">
-                *O preço pode variar cas a assinatura seja feita através de
+                *O preço pode variar caso a assinatura seja feita através de
                 outras plataformas.
             </p>
         </section>
@@ -236,9 +241,14 @@
 
         <section
             class="image-text-section image-text-section--image-full-width">
-            <img
-                src="dist/images/fundo_rei_leao.png"
-                alt="Imagem com TV, Computador, Tablet e Celular" />
+            <picture>
+                <source
+                    media="(max-width: 768px)"
+                    srcset="./dist/images/fundo_rei_leao_celular.png" />
+                <img
+                    src="dist/images/fundo_rei_leao.png"
+                    alt="Imagem com TV, Computador, Tablet e Celular" />
+            </picture>
             <div
                 class="image-text-section__text-container image-text-section--image-full-width__text-container">
                 <h2 class="title">Baixe filmes e séries</h2>
